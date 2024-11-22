@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protis Global</title>
+  <link href="images/fevicon.jpg" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400;600&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          zIndex: {
+            'custom': '10',
+          },
+          boxShadow: {
+            'balanced':'0 0 16px 0 #0c0c0c14',
+          },
+          fontFamily: {
+            redhat: ["'Red Hat Display'", "sans-serif"],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            protisBlack: '#4A4945',
+            lightpink: '#FFC0CBCC',
+            customyellow: '#FFD609',
+            yellow:'#F2CB05',
+            blue: '#006D77',
+            grey: '#5D6074',
+            customblack: '#010626',
+            lightblack: '#343851',
+          }
+        },
+      },
+    };
+
+  </script>
+  <style>
+    @font-face {
+      font-family: "Red Hat Display";
+      src: url("/fonts/RedHatDisplay-Regular.woff2") format("woff2"),
+        url("/fonts/RedHatDisplay-Regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Red Hat Display";
+      src: url("/fonts/RedHatDisplay-Medium.woff2") format("woff2"),
+        url("/fonts/RedHatDisplay-Medium.woff") format("woff");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Red Hat Display";
+      src: url("/fonts/RedHatDisplay-SemiBold.woff2") format("woff2"),
+        url("/fonts/RedHatDisplay-SemiBold.woff") format("woff");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Red Hat Display";
+      src: url("/fonts/RedHatDisplay-Bold.woff2") format("woff2"),
+        url("/fonts/RedHatDisplay-Bold.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <style>
+    .v-shape {
+      position: relative;
+      background-color: #FCD34D;
+      overflow: hidden;
+    }
+
+    .v-shape::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15%;
+      height: 30px;
+      background-color: #FFFFFF;
+      clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    }
+
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      object-fit: cover;
+    }
+
+
+
+    @media (min-width: 1024px) {
+      #navLinks {
+        display: flex;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Header section -->
+  <div id="top-page" class="w-full absolute top-0 z-[100]" style="background-color: #FFFFFF99;">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center px-3">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html">
+          <img src="images/nav_logo.png" alt="Logo" class="md:max-w-[153px] max-w-[113px]">
+        </a>
+      
+      </div>
+
+      <!-- Navigation Links and Contact Button -->
+      <div class="flex items-center sm:gap-6 gap-2">
+        <!-- Desktop Navigation Links -->
+        <div id="navLinks" class="hidden lg:flex gap-6 items-center h-full">
+          <a href="#about-us"
+            class="relative text-base font-redhat font-normal text-customblack px-4 py-12 h-full hover:transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[6px] after:bg-customblack after:transition-all after:duration-300 scroll-link">About
+            Us</a>
+          <a href="#our-approach"
+            class="relative text-base font-redhat font-normal text-customblack px-4 py-12 h-full hover:transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[6px] after:bg-customblack after:transition-all after:duration-300 scroll-link">Our
+            Approach</a>
+          <a href="#industries-we-serve"
+            class="relative text-base font-redhat font-normal text-customblack px-4 py-12 h-full  hover:transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[6px] after:bg-customblack after:transition-all after:duration-300 scroll-link">Industries
+            We Serve</a>
+          <a href="#media"
+            class="relative text-base font-redhat font-normal text-customblack px-5 py-12  h-full  hover:transition-all duration-300 ease-in-out after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[6px] after:bg-customblack after:transition-all after:duration-300 scroll-link">Media</a>
+
+          <a href="#search">
+            <img src="images/search_icon.png" alt="Search Icon" class="w-5 h-5">
+          </a>
+        </div>
+
+        <!-- Contact Button -->
+        <button
+          class="bg-white rounded text-customblack font-redhat text-base px-5 sm:px-14 py-2.5 font-medium hover:bg-customblack hover:text-white transition-all duration-500 ease-in-out">
+          <a href="./contact.html">Contact Us</a>
+        </button>
+
+        <!-- Toggle Button -->
+        <div class="lg:hidden">
+          <button id="menuToggle"
+            class="bg-white rounded text-customblack text-2xl px-4 py-2 my-6 sm:my-9 font-medium hover:bg-customblack hover:text-white transition-all duration-500 ease-in-out">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+ 
+<!-- Mobile Navigation -->
+<div id="mobileMenu"
+class="fixed top-0 right-0 h-full w-full bg-white shadow-lg transform translate-x-full transition-transform duration-500 z-[200]">
+<div class="flex justify-between items-center px-5 py-4">
+    <div class="text-2xl font-redhat font-semibold text-customblack">Menu</div>
+    <button id="closeMenuBtn" class="text-3xl text-customblack">&times;</button>
+</div>
+
+<div class="px-5 space-y-4">
+    <a href="#about-us" class="scroll-link block text-base font-redhat text-customblack hover:text-gray-700 transition duration-300">About Us</a>
+    <hr class="border-t border-gray-300" />
+    <a href="#our-approach" class="scroll-link block text-base font-redhat text-customblack hover:text-gray-700 transition duration-300">Our Approach</a>
+    <hr class="border-t border-gray-300" />
+    <a href="#industries-we-serve" class="scroll-link block text-base font-redhat text-customblack hover:text-gray-700 transition duration-300">Industries We Serve</a>
+    <hr class="border-t border-gray-300" />
+    <a href="#media" class="scroll-link block text-base font-redhat text-customblack hover:text-gray-700 transition duration-300">Media</a>
+    <hr class="border-t border-gray-300" />
+
+    <!-- Contact Button -->
+    <button
+        class="bg-customblack rounded text-white font-redhat text-base px-20 py-2.5 font-medium hover:bg-white hover:text-customblack border-[2px] border-lightblack transition-all  duration-500 ease-in-out">
+        <a href="./contact.html">Contact Us</a>
+    </button>
+</div>
+</div>
+
+
+
+  <!-- Navbar-End -->
+  <!-- Banner Section -->
+  <div class="w-full" style="background-color: #F1F1F1;">
+    <div
+      class="max-w-[1440px] mx-auto pt-20 flex flex-col lg:flex-row items-center justify-between px-4 xl:px-10 relative">
+
+      <!-- Text Section -->
+      <div class="pt-12 mb-8 lg:mb-0 lg:w-[50%]">
+        <div
+          class="max-w-[590px] text-3xl lg:text-[40px] font-redhat text-customblack font-semibold leading-tight text-left">
+          Executive Recruiting for Consumer Brands
+        </div>
+        <div class="max-w-[570px] text-customblack text-base font-redhat font-normal mt-6 text-left">
+          We were built by CPG professionals intentionally around the CPG product journey — from ideation to shelf.
+        </div>
+        <div class="mt-6 text-left">
+          <button
+            class="text-customblack rounded font-semibold text-lg font-redhat border-[1px] border-customblack px-8 py-2  hover:bg-customblack hover:text-white hover:transition-all duration-500 ease-in-out focus:outline-none">
+            Learn More About Us
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider Section -->
+      <div id="about-us" class="lg:w-[50%] relative overflow-hidden" style="z-index: 1;">
+        <!-- Fixed Shape Design -->
+        <div class="relative">
+          <img src="images/homepage_shapes.png" alt="Shape Design" class="w-full">
+        </div>
+
+        <!-- Banner Slider -->
+        <div class=" banner-slider z-custom">
+          <div class="banner-slide left-1/3 ">
+            <img src="images/home_banner_girl.png" alt="Banner Girl" class="w-full">
+          </div>
+          <div class="banner-slide left-1/3">
+            <img src="images/homepage_carousel-2.png" alt="Banner Men" class="w-full">
+          </div>
+          <div class="banner-slide left-1/3">
+            <img src="images/homepage_carousel-4.png" alt="Banner Girl" class="w-full">
+          </div>
+          <div class="banner-slide left-1/3">
+            <img src="images/homepage_carousel-3.png" alt="Banner Girl" class="w-full pt-5">
+          </div>
+          <div class="banner-slide left-1/3">
+            <img src="images/header_banner06.webp" alt="Banner Girl" class="w-full pt-10">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-custom">
+        <!-- Pagination indicators will be generated dynamically -->
+      </div>
+
+    </div>
+  </div>
+
+  <div class="w-full max-w-[1440px] mx-auto py-5 md:py-10 px-4 xl:px-10">
+    <div class="flex flex-col md:flex-row justify-between md:gap-5">
+      <!-- Text Content -->
+      <div class="w-full md:w-1/2 lg:w-full mb-6 md:mb-0">
+        <div class="text-3xl lg:text-[40px] font-redhat text-customblack font-semibold leading-tight text-left pb-10">
+          Transforming Futures, One Individual at a Time
+        </div>
+        <div class="text-lg sm:text-xl lg:text-[32px] text-lightblack font-redhat font-normal pb-4">
+          Your definition of winning is as unique as you are.
+        </div>
+        <div class="text-base sm:text-lg text-lightblack font-redhat font-normal pb-4">
+          The decision you make on who to partner with is not only critical to the success of delivering
+          transformational talent to the organization – it’s critical to achieving your own personal and professional
+          goals.
+        </div>
+        <div class="text-base sm:text-lg text-lightblack font-redhat font-normal">
+          Through our personal scorecard approach, we dive into your personal, professional, and financial
+          motivations to get to the core of what drives you.
+        </div>
+      </div>
+
+      <!-- Video Section -->
+      <div class="w-full md:w-1/2 lg:w-full relative h-auto overflow-hidden flex items-center justify-center">
+        <img id="thumbnail1" src="images/play_video.png"
+          class="w-full h-full object-cover cursor-pointer hover:w-[110%] hover:h-[110%] transition-all duration-300 ease-in-out"
+          alt="Video Thumbnail">
+        <video id="video1" class="w-full h-full object-cover hidden" controls>
+          <source src="images/proti_global_demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w-full max-w-[1440px] mx-auto">
+    <div class="flex lg:flex-row flex-col-reverse justify-between px-4 xl:px-10">
+
+      <!-- Image Section -->
+
+      <div class="relative w-full lg:w-6/12 flex items-center">
+
+        <img src="images/circle.png" alt="Shape Design" class="w-auto max-w-full sm:h-[auto] h-[357px]">
+
+
+        <div class="absolute inset-0">
+
+          <img src="images/gesse.png" alt="Gesse Image" class="absolute top-0 left-0 md:w-[319px] w-[230px]">
+
+          <img src="images/shutterstock.png" alt="Girl Pic"
+            class="absolute w-auto sm:h-[auto] h-[420px] sm:left-1/4 left-0">
+        </div>
+
+      </div>
+
+      <!-- Text Section -->
+      <div class="w-full lg:w-6/12 lg:pl-5 pb-8 flex flex-col items-start justify-center">
+        <div class="text-customlack font-redhat text-2xl sm:text-[40px]  font-semibold mt-4 text-left">
+          Leave Mediocrity in the Dust
+        </div>
+        <div class="text-lightblack text-lg font-redhat font-normal mt-4 text-left pb-2">
+          We've been the driving force behind some of the most iconic success stories in the industry. From Fortune
+          500
+          companies to startups, we've been the catalyst that propels dreams into reality.
+        </div>
+        <div class="mt-6 text-left pb-5">
+          <button
+            class="rounded text-customblack font-semibold text-lg font-redhat border-[1px] border-customblack px-8 py-2.5 hover:transition-all duration-500 ease-in-out transform hover:bg-customblack hover:text-white focus:outline-none">
+            Learn About Our Approach
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Our Clients -->
+
+  <div class="w-full max-w-[1440px] mx-auto py-14 px-4 xl:px-10">
+    <div class="text-center">
+      <div id="client" class="text-2xl lg:text-[40px] font-semibold font-redhat text-customblack py-4">
+        Our Clients
+      </div>
+      <div class="max-w-full lg:max-w-[770px] text-lg font-redhat font-normal text-lightblack mx-auto pb-10">
+        Our commitment to fostering dynamic collaborations sets us apart, ensuring that clients can
+        confidently bring the best products and experiences to market through transformative talent.
+      </div>
+    </div>
+
+    <!-- Brand-Logo img Slider -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/whiteclaw.png" alt="whiteclaw" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/redbull.png" alt="Red Bull" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/trulieve.png" alt="Trulieve" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/pabst.png" alt="Pabst" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/arla.png" alt="Arla" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 6 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/hostess.png" alt="Hostess" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 7 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/whiteclaw.png" alt="whiteclaw" class="h-auto max-h-full max-w-full">
+        </div>
+        <!-- Slide 8 -->
+        <div class="swiper-slide flex items-center justify-center pb-5">
+          <img src="images/redbull.png" alt="Red Bull" class="h-auto max-h-full max-w-full">
+        </div>
+      </div>
+    
+      <!-- Swiper Scrollbar -->
+      <div class="swiper-scrollbar swiper-scrollbar-horizontal">
+        <div class="swiper-scrollbar-drag"></div>
+      </div>
+    
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    
+
+  </div>
+
+  <!-- Marc Anthony Group -->
+
+  <div class="w-full max-w-[1440px] mx-auto px-4 xl:px-10">
+    <div class="flex flex-col lg:flex-row md:items-center justify-between lg:space-x-10 space-y-6 lg:space-y-0">
+
+      <div class="w-full lg:w-1/2">
+        <img src="images/CaseStudyBanner_WhiteClaw.png" alt="CaseStudyBanner_WhiteClaw" class="max-w-full h-auto">
+      </div>
+
+      <div class="w-full lg:w-1/2 max-w-[620px] text-left">
+        <div class="md:text-[32px] text-xl text-customblack font-normal font-redhat pb-4">
+          Marc Anthony Group
+        </div>
+        <button
+          class="mb-5 text-sm font-normal text-custmblack bg-lightpink px-3 py-[4px] rounded-3xl hover:bg-pink-300 hover:transition-all duration-500 ease-in-out">
+          BEER, WINE &amp; SPIRITS
+        </button>
+        <div class="text-lightblack font-redhat font-normal text-lg leading-[26px]">
+          Mark Anthony's ground-breaking move to internalize production resulted in the creation of three
+          state-of-the-art
+          breweries. Learn how we collaborated with them to turn this bold vision into a reality.
+        </div>
+        <button
+          class="mt-8 text-custpmblack rounded font-semibold text-lg font-redhat border-[1px] border-customblack px-8 py-3 hover:transition-all duration-500 ease-in-out transform hover:bg-customblack hover:text-white">
+          View Case Study
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Let’s Build Your Future Together -->
+  <div id="industries-we-serve"
+  class="w-full max-w-[1360px] mx-auto p-10 shadow-balanced mt-10">
+    <div class="text-center">
+      <div class="md:block hidden font-redhat text-2xl lg:text-[40px] font-semibold text-customblack py-4">
+        Let’s Build Your Future Together
+      </div>
+      <div
+        class="md:block hidden max-w-full lg:max-w-[820px] text-lg  font-normal font-redhat text-lightblack mx-auto pb-10">
+        We believe in the power of the right people in the right positions. Let us be your guide to discovering the
+        talent or role that fuels your success.
+      </div>
+      <div class="md:hidden block text-2xl font-semibold text-black py-4">
+        Executive Recruiting for Consumer Brands
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between pt-5 space-y-8 lg:space-y-0 lg:space-x-6">
+
+
+      <div class="text-center w-full md:w-2/6">
+        <div>
+          <img class="mx-auto" src="images/looking_job.png" alt="Looking for a Job">
+        </div>
+        <div class="text-[26px] font-redhat font-semibold text-customblack py-6">
+          I’m Looking<br> For A Job
+        </div>
+        <div class="text-lg font-redhat font-normal text-lightblack pb-6">
+          Candidate Resources
+        </div>
+        <button class="w-[220px] bg-yellow text-customblack font-semibold text-base p-2.5 rounded hover:bg-customblack hover:text-white hover:transition-all duration-500 ease-in-out">
+          I Am Talent
+        </button>
+      </div>
+
+
+      <div class="hidden md:block bg-gray-300 h-80 w-[1px]"></div>
+
+      <div class="md:hidden block bg-gray-300 h-[1px] w-full"></div>
+
+
+      <div class="text-center w-full md:w-2/6">
+        <div>
+          <img class="mx-auto" src="images/seeking_profile.png" alt="Seeking the Right Individual">
+        </div>
+        <div class="text-[26px] font-redhat font-semibold text-customblack py-6">
+          I’m Seeking<br> The Right Individual
+        </div>
+        <div class="text-lg font-redhat font-normal text-lightblack pb-6">
+          Executive Search
+        </div>
+        <button class="w-[220px] bg-yellow text-customblack font-semibold text-base p-2.5 rounded hover:bg-customblack hover:text-white hover:transition-all duration-500 ease-in-out">
+          I Need Talent
+        </button>
+      </div>
+      <div class="hidden md:block bg-gray-300 h-80 w-[1px]"></div>
+
+      <div class="md:hidden block bg-gray-300 h-[1px] w-full"></div>
+
+
+      <div class="text-center w-full md:w-2/6">
+        <div>
+          <img class="mx-auto" src="images/carrer_planning.png" alt="Career Planning">
+        </div>
+        <div class="text-[26px] font-redhat font-semibold text-customblack py-6">
+          I Want<br> Career Planning
+        </div>
+        <div class="text-lg font-redhat font-normal text-lightblack pb-6">
+          Board of Directors
+        </div>
+        <button class="w-[220px] bg-yellow text-customblack font-semibold text-base p-2.5 rounded hover:bg-customblack hover:text-white hover:transition-all duration-500 ease-in-out">
+          View Career Resources
+        </button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- Media Center -->
+
+  <div id="media" class="w-full bg-blue mt-8">
+    <div class="max-w-[1440px] mx-auto px-4 lg:px-10 py-8">
+      <div class="text-center pb-5">
+        <div class="text-[40px] font-redhat font-semibold text-white">
+          Media Center
+        </div>
+        <div class="max-w-[760px] font-redhat text-lg font-normal text-white opacity-80 mx-auto p-3">
+          Have it read up to date with our ultimate hub for inspiring articles, captivating videos, engaging podcasts,
+          and interactive webinars.
+        </div>
+      </div>
+
+      <div
+        class="w-full max-w-[1440px] mx-auto bg-gray-200 relative flex flex-col lg:flex-row items-center justify-between mb-8 lg:mb-0 ">
+
+        <div class="pt-5 mb-8 lg:mb-0 w-full lg:w-1/2 lg:px-12 px-4">
+          <div class="text-grey text-base font-semibold font-redhat mb-2">
+            FEATURED
+          </div>
+          <h2 class="text-black text-2xl sm:text-[48px] font-semibold font-redhat leading-tight lg:max-w-none mb-6">
+            A Job Seeker’s Guide to Interviewing-Protis Global
+          </h2>
+          <p class="text-customblack text-lg font-normal font-redhat mb-8">
+            As a job seeker, finding the right role goes beyond ticking boxes on your skills checklist. The experience
+            you encounter in a new position will significantly impact your overall job satisfaction and performance.
+          </p>
+          <div>
+            <button
+              class="mb-14 text-customblack font-semibold text-lg rounded font-redhat border-[1px] border-customblack px-8 py-2.5 hover:transition-all duration-500 ease-in-out hover:bg-customblack hover:text-white focus:outline-none">
+              View Article
+            </button>
+          </div>
+        </div>
+
+
+        <div class="relative w-full lg:w-1/2 overflow-hidden">
+
+          <img src="images/yellow_shape.png" alt="Shape Design" class="w-full">
+
+          <div class="absolute -top-[5%] md:top-[10%] left-0 transform lg:translate-x-4 lg:-translate-y-4">
+            <img src="images/gesse.png" alt="Gesse" class="w-auto filter brightness-0 invert ">
+          </div>
+          <div class="absolute top-0 bottom-0 h-full right-0">
+            <img src="images/media_center_carousel.png" alt="Media Girl" class="h-full right-0">
+          </div>
+        </div>
+      </div>
+
+      <!-- overflow-x-auto-->
+
+      <div class="relative">
+        <div
+          class="w-full max-w-[1038px] mx-auto z-10 bg-white absolute left-1/2 transform -translate-x-1/2 flex justify-center text-center rounded -mt-8 overflow-x-auto">
+          <div class="flex">
+            <button
+              class="min-w-[173px] h-[46px] text-base text-protisBlack font-medium bg-customyellow flex items-center justify-center">
+              All
+            </button>
+            <button
+              class="min-w-[173px] h-[46px] text-base text-protisBlack font-medium hover:bg-customyellow flex items-center justify-center">
+              <a href="#webinars">Webinars</a>
+            </button>
+            <button
+              class="min-w-[173px] h-[46px] text-base text-protisBlack font-medium hover:bg-customyellow flex items-center justify-center">
+              <a href="#video">Videos</a>
+            </button>
+            <button
+              class="min-w-[173px] h-[46px] text-base text-protisBlack font-medium hover:bg-customyellow flex items-center justify-center">
+              <a href="#event">Events</a>
+            </button>
+            <button
+              class="min-w-[173px] h-[46px] text-base text-protisBlack font-medium hover:bg-customyellow flex items-center justify-center">
+              <a href="#podcast">Podcasts</a>
+            </button>
+            <button
+              class="min-w-[173px] h-[46px] text-base text-protisBlack font-medium hover:bg-customyellow flex items-center justify-center">
+              <a href="#article">Articles</a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  
+
+  <div class="w-full bg-blue">
+    <div class="max-w-[1440px] mx-auto md:px-10 px-5 py-8">
+     
+      <!-- Webinars-section-->
+
+<div class="w-full mx-auto pt-6">
+  <!-- Webinars Heading -->
+   <div class="flex justify-between mb-3">
+    <div id="webinars" class="text-white font-medium text-[26px] font-redhat">
+      Webinars
+    </div>
+  
+     <div class="flex">
+      <div class="text-white font-medium text-[26px] font-redhat hidden  2xl:block mr-[400px]">
+        Videos
+      </div>
+      <div class="flex items-center gap-2">
+      <div class="text-base text-white font-medium font-redhat">
+        View all
+      </div>
+      <div>
+        <img src="images/play_colour.png" alt="play icon">
+      </div>
+   </div>
+    </div>
+   </div>
+  
+  <!-- Webinars Cards Container -->
+  <div class="flex flex-col md:flex-row justify-between gap-6">
+    
+    <!-- Webinars Card 1 -->
+    <div class="flex flex-col justify-between w-full md:w-1/4 bg-white">
+      <div class="overflow-hidden">
+        <img src="images/blockbuster_deal.png" alt="Blockbuster Deal" id="picture" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/speraker_vedio_icon.png" alt="video speraker icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 19, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat py-3">
+          A blockbuster cannabis deal goes bust and more could fall..
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Webinars Card 2 -->
+    <div class="flex flex-col justify-between w-full md:w-1/4 bg-white">
+      <div class="overflow-hidden">
+        <img src="images/how_to_build.png" alt="Build Project"  class="w-full h-full object-cover" id="picture">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/speraker_vedio_icon.png" alt="video speraker icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 17, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat py-3">
+          How to Build a Top Hiring Brand
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...
+        </div>
+      </div>
+    </div>
+
+    <!-- video -->
+    <div id="video" class="pt-3 flex justify-between md:hidden block">
+      <div class="text-white font-medium text-[26px] font-redhat">
+        Videos
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="text-base text-white font-medium font-redhat">
+          View all
+        </div>
+        <div>
+          <img src="images/play_colour.png" alt="play icon">
+        </div>
+      </div>
+     </div>
+    <div class="flex flex-col justify-between w-full md:w-2/5 bg-white">
+      <div class="relative max-w-2/5 h-auto overflow-hidden">
+
+        <img id="thumbnail2" src="images/meet_vedio.png"
+          class="w-full h-full hover:scale-110 hover:transition-all duration-500 ease-in-out" alt="Video Thumbnail">
+
+
+        <video id="video2" class="w-full h-full object-cover hidden" controls="">
+          <source src="images/Restaurant_Promo.mp4" type="video/mp4">
+
+
+        </video>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/video_icon.png" alt="Meet video icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 19, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat py-3">
+          Meat Alternatives: A Tasty Journey into the Future<br>
+          of Food
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+     
+ <!-- Events Section -->
+<div class="w-full mx-auto pt-8">
+  <!-- Events Heading -->
+   <div class="flex justify-between">
+    <div id="event" class="text-white font-medium text-[26px] font-redhat mb-3">
+      Events
+    </div>
+    <div class="xl:pr-8 pr-0 text-white font-medium text-[26px] font-redhat md:block hidden">
+      Podcasts
+    </div>
+   
+    <div class="flex items-center gap-2">
+      <div class="text-base text-white font-medium font-redhat">
+        View all
+      </div>
+      <div>
+        <img src="images/play_colour.png" alt="play icon">
+      </div>
+   
+    </div>
+   </div>
+  
+  <!-- Events Cards Container -->
+  <div class="flex flex-col md:flex-row justify-between gap-6">
+    
+    <!-- Event Card 1 -->
+    <div class="flex flex-col justify-between w-full md:w-2/5 bg-white">
+      <div class="overflow-hidden">
+        <img src="images/carft_beer_brand.png" alt="Beer Juice" id="picture" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/calender_icon.png" alt="Calendar Icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 19, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat py-3">
+          Craft Beer Brand Growth: A Strategic How To Guide
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Podcasts Card 1 -->
+    <div id="podcast" class="pt-3 flex justify-between md:hidden block">
+      <div class="text-white font-medium text-[26px] font-redhat">
+        Podcasts
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="text-base text-white font-medium font-redhat">
+          View all
+        </div>
+        <div>
+          <img src="images/play_colour.png" alt="play icon">
+        </div>
+      </div>
+     </div>
+    <div class="flex flex-col justify-between w-full md:w-1/4 bg-white">
+      
+      <div class="overflow-hidden">
+        <img src="images/rahul_card.png" alt="Rahul Leaf"  class="w-full h-full object-cover" id="picture">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/headuser_icon.png" alt="Headphone Icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            Episode 5 Season 3
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat py-3">
+          Sustainable Elegance: Building an Eco-Conscious Culture
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat">
+          Bert Miller welcomes Raul Leal, the CEO of SH Hotels and Resorts...
+        </div>
+      </div>
+    </div>
+
+    <!-- Podcasts Card 2 -->
+    <div class="flex flex-col justify-between w-full md:w-1/4 bg-white">
+      <div class="overflow-hidden">
+        <img src="images/alex_card.png" alt="Alex Guy" class="w-full h-full object-cover" id="picture">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/headuser_icon.png" alt="Headphone Icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            Episode 4 Season 3
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat py-3">
+          Solving the World’s Thirst: The World’s Path to Sustainable Water
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat"> 
+           In a world grappling with depleting water resources, one company is...
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Articles Section -->
+<div class="w-full mx-auto pt-8">
+  <!-- Articles Heading -->
+   <div id="article" class="flex justify-between">
+    <div class="text-white font-medium text-[26px] font-redhat mb-3">
+      Articles
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="text-base text-white font-medium font-redhat">
+        View all
+      </div>
+      <div>
+        <img src="images/play_colour.png" alt="play icon">
+      </div>
+    </div>
+   </div>
+  
+  <!-- Article Cards Container -->
+  <div class="flex flex-col md:flex-row justify-between gap-6">
+    
+    <!-- Article Card 1 -->
+    <div class="flex flex-col justify-between w-full md:w-[30%] bg-white">
+      <div class="overflow-hidden">
+        <img src="images/company_culture.png" alt="Company Culture" id="picture" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/document_icon.png" alt="Document Icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 19, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat">
+          How Job Seekers Can Assess Company Culture
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Card 2 -->
+    <div class="flex flex-col justify-between w-full md:w-[30%] bg-white">
+      <div class="overflow-hidden">
+        <img src="images/hiring_brand.png" alt="Hiring Brand" id="picture" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/document_icon.png" alt="Document Icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 17, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat">
+          How to Build a Top Hiring Brand
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Card 3 -->
+    <div class="flex flex-col justify-between w-full md:w-[30%] bg-white">
+      <div class="overflow-hidden">
+        <img src="images/stands_inovoter.png" alt="Stand as Innovator" id="picture" class="w-full h-full object-cover">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="images/document_icon.png" alt="Document Icon" class="w-6 h-6">
+          <span class="text-grey text-base font-normal font-redhat">
+            February 16, 2024
+          </span>
+        </div>
+        <div class="text-lg text-customblack font-semibold font-redhat">
+          3 Tips to Stand Out as an Innovator
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+  </div>
+
+
+  <!-- Our Impact -->
+
+  <div id="our-approach" class="w-full max-w-[1440px] mx-auto px-10 md:mb-20 md:mb-6">
+
+    <div class="text-center pt-8">
+      <div class="text-[40px] font-redhat font-semibold text-customblack pb-3">
+        Our Impact
+      </div>
+      <div class="max-w-[760px] text-lg font-redhat font-normal text-lightblack mx-auto pb-6">
+        In 1995, our founders embarked on a journey that would disrupt the status quo of the executive recruiting
+        industry. We have been transforming companies and lives ever since.
+      </div>
+    </div>
+
+
+    <div class="max-lg:hidden flex flex-row items-center justify-between pt-5">
+
+
+      <div class="text-center">
+        <div>
+          <img class="mx-auto" src="images/first_interview_round.png" alt="Interviews icon">
+        </div>
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">
+          9,395
+        </div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">
+          First Round Interviews
+        </div>
+
+      </div>
+
+
+      <div class="hidden lg:block bg-gray-300 h-56 w-[2px]"></div>
+
+      <div class="text-center">
+        <div>
+          <img class="mx-auto" src="images/total_placement.png" alt="Placements icon">
+        </div>
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">
+          2,569
+        </div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">
+          Total Placements
+        </div>
+
+      </div>
+
+
+      <div class="hidden lg:block bg-gray-300 h-56 w-[2px]"></div>
+
+      <div class="text-center">
+        <div>
+          <img class="mx-auto" src="images/diversity_Placement.png" alt="Diversity icon">
+        </div>
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">
+          47%
+        </div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">
+          Diversity Placements
+        </div>
+
+      </div>
+
+
+      <div class="hidden lg:block bg-gray-300 h-56 w-[2px]"></div>
+
+      <div class="text-center">
+        <div>
+          <img class="mx-auto" src="images/economic_impect.png" alt="Economic icon">
+        </div>
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">
+          $700M
+        </div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">
+          Economic Impact
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="lg:hidden grid grid-cols-2 gap-8 pt-5 relative">
+      <div class="flex flex-col items-center">
+        <img class="mx-auto" src="images/first_interview_round.png" alt="Interviews icon">
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">9,395</div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">First Round Interviews</div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img class="mx-auto" src="images/total_placement.png" alt="Placements icon">
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">2,569</div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">Total Placements</div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img class="mx-auto" src="images/diversity_Placement.png" alt="Diversity icon">
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">47%</div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">Diversity Placements</div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img class="mx-auto" src="images/economic_impect.png" alt="Economic icon">
+        <div class="text-[32px] font-redhat font-semibold text-customblack pt-5">$700M</div>
+        <div class="text-[22px] font-redhat font-normal text-lightblack py-3">Economic Impact</div>
+      </div>
+
+      <!-- Vertical & Horizontal Divider -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 bg-gray-300 w-[2px] h-full"></div>
+
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 w-full h-[2px]">
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Card Slider -->
+  <div id="slide" class="w-full max-w-[1440px] mx-auto px-4 lg:px-10 md:my-20 my-6">
+    <div class="swiper mySwiper3">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide w-full lg:w-6/12 shadow-balanced p-4 sm:p-6 mb-14">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
+            <div class="flex gap-4 items-center">
+              <img src="images/men_chery.png" alt="Chris Mayor" class="h-12 w-12 object-cover">
+              <div>
+                <div class="text-lg font-semibold text-customblack font-redhat">Chris Mayor</div>
+                <div class="text-base font-normal text-lightblack font-redhat">VP Of Sales</div>
+              </div>
+            </div>
+            <button
+              class="mt-4 sm:mt-0 text-xs font-normal text-lightblack bg-pink-100 p-2 rounded-3xl hover:scale-105 hover:bg-pink-200 transition-all duration-300">
+              Beer, Wine &amp; Spirits
+            </button>
+          </div>
+          <p class="text-base font-normal font-redhat text-lightblack">
+            “Lorem ipsum dolor sit amet consectetur. Condimentum lectus dignissim eleifend mauris. Eu et congue ut eget
+            diam et vitae viverra facilisi.”
+          </p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide w-full lg:w-6/12 shadow-balanced p-4 sm:p-6 mb-14">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
+            <div class="flex gap-4 items-center">
+              <img src="images/jackson_Polad.png" alt="Jackson Poland" class="h-12 w-12 object-cover">
+              <div>
+                <div class="text-lg font-semibold text-customblack font-redhat">Jackson Poland</div>
+                <div class="text-base font-normal text-lightblack font-redhat">Trade Marketing Director</div>
+              </div>
+            </div>
+            <button
+              class="mt-4 sm:mt-0 text-xs font-normal text-lightblack bg-green-100 p-2 rounded-3xl hover:scale-105 hover:bg-green-300 transition-all duration-300">
+              Cannabis
+            </button>
+          </div>
+          <p class="text-base font-normal text-lightblack font-redhat">
+            “Lorem ipsum dolor sit amet consectetur. Condimentum lectus dignissim eleifend mauris. Eu et congue ut eget
+            diam et vitae viverra facilisi.”
+          </p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide w-full lg:w-6/12 shadow-balanced p-4 sm:p-6 mb-14">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
+            <div class="flex gap-4 items-center">
+              <img src="images/men_chery.png" alt="Chris Mayor" class="h-12 w-12 object-cover">
+              <div>
+                <div class="text-lg font-semibold text-customblack font-redhat">Chris Mayor</div>
+                <div class="text-base font-normal text-lightblack font-redhat">VP Of Sales</div>
+              </div>
+            </div>
+            <button
+              class="mt-4 sm:mt-0 text-xs font-normal text-lightblack bg-pink-100 p-2 rounded-3xl hover:scale-105 hover:bg-pink-200 transition-all duration-300">
+              Beer, Wine &amp; Spirits
+            </button>
+          </div>
+          <p class="text-base font-normal font-redhat text-lightblack">
+            “Lorem ipsum dolor sit amet consectetur. Condimentum lectus dignissim eleifend mauris. Eu et congue ut eget
+            diam et vitae viverra facilisi.”
+          </p>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide w-full lg:w-6/12 shadow-balanced p-4 sm:p-6 mb-14">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4">
+            <div class="flex gap-4 items-center">
+              <img src="images/jackson_Polad.png" alt="Jackson Poland" class="h-12 w-12 object-cover">
+              <div>
+                <div class="text-lg font-semibold text-customblack font-redhat">Jackson Poland</div>
+                <div class="text-base font-normal text-lightblack font-redhat">Trade Marketing Director</div>
+              </div>
+            </div>
+            <button
+              class="mt-4 sm:mt-0 text-xs font-normal text-lightblack bg-green-100 p-2 rounded-3xl hover:scale-105 hover:bg-green-300 transition-all duration-300">
+              Cannabis
+            </button>
+          </div>
+          <p class="text-base font-normal text-lightblack font-redhat">
+            “Lorem ipsum dolor sit amet consectetur. Condimentum lectus dignissim eleifend mauris. Eu et congue ut eget
+            diam et vitae viverra facilisi.”
+          </p>
+        </div>
+
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination pagination"></div>
+    </div>
+  </div>
+
+
+  <!-- Need Top CPG Talent? -->
+
+  <div class="w-full v-shape bg-customyellow">
+    <div class="max-w-[1440px] mx-auto px-10 py-10 text-center relative z-10">
+      <div class="font-semibold font-redhat text-4xl text-customblack pt-8">
+        Need Top CPG Talent?
+      </div>
+      <div class="font-normal font-redhat text-lg text-customblack py-4">
+        Whether you're hiring or job-seeking, we've got you covered.
+      </div>
+      <button
+        class="text-customblack rounded font-medium text-lg font-redhat border-[1px] border-customblack px-16 py-2.5 hover:transition-all duration-500 ease-in-out transform hover:bg-black hover:text-white hover:border-customblack focus:outline-none">
+        <a href="./contact.html">Contact Us</a>
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- Footer-Page -->
+
+  <footer id="contact" class="w-full max-w-[1440px] mx-auto px-6 py-10 text-left">
+
+    <div class="flex flex-col md:flex-row justify-between md:text-left space-y-5 md:space-y-0 md:space-x-5">
+      <!-- Logo-->
+      <div class="flex gap-5 flex-wrap items-center">
+
+        <a href="#top-page">
+          <img src="images/footer_logo.png" alt="logo" class="md:w-full w-32 py-5">
+        </a>
+
+        <p class="font-normal md:text-[26px] text-2xl text-customblack font-redhat">
+          BUILDING COMPANIES. CHANGING LIVES.
+        </p>
+
+
+      </div>
+
+
+      <!-- Social Icons -->
+      <div class="flex gap-3 flex-wrap items-center">
+        <a href="https://www.facebook.com" aria-label="Facebook" class="group">
+          <div
+            class="border-[1px] border-gray-300 rounded w-12 h-12 text-3xl flex justify-center items-center hover:transition-all duration-500 ease-in-out group-hover:scale-105 hover:bg-customyellow hover:border-none">
+            <i class="fa-brands fa-square-facebook"></i>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn" class="group">
+          <div
+            class="border-[1px] border-gray-300 rounded w-12 h-12 text-3xl flex justify-center items-center hover:transition-all duration-500 ease-in-out group-hover:scale-105 hover:bg-customyellow hover:border-none">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </a>
+        <a href="https://www.twitter.com" aria-label="Twitter" class="group">
+          <div
+            class="border-[1px] border-gray-300 rounded w-12 h-12 text-3xl flex justify-center items-center hover:transition-all duration-500 ease-in-out group-hover:scale-105 hover:bg-customyellow hover:border-none">
+            <i class="fa-brands fa-square-x-twitter"></i>
+          </div>
+        </a>
+        <a href="https://www.instagram.com" aria-label="Instagram" class="group">
+          <div
+            class="border-[1px] border-gray-300 rounded w-12 h-12 text-3xl flex justify-center items-center hover:transition-all duration-500 ease-in-out group-hover:scale-105 hover:bg-customyellow hover:border-none">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </a>
+        <a href="https://www.tiktok.com" aria-label="TikTok" class="group">
+          <div
+            class="border-[1px] border-gray-300 rounded w-12 h-12 text-3xl flex justify-center items-center hover:transition-all duration-500 ease-in-out group-hover:scale-105 hover:bg-customyellow hover:border-none">
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </a>
+        <a href="https://www.youtube.com" aria-label="YouTube" class="group">
+          <div
+            class="border-[1px] border-gray-300 rounded w-12 h-12 text-3xl flex justify-center items-center hover:transition-all duration-500 ease-in-out group-hover:scale-105 hover:bg-customyellow hover:border-none">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </a>
+
+
+      </div>
+
+    </div>
+    <!-- Divider -->
+    <div class="w-full bg-gray-300 h-[1px] my-5"></div>
+
+    <!-- Links Section-Desktop (Hidden on 636px and below) -->
+    <div class="hidden grid-cols-3 sm:grid md:grid-cols-4 gap-5 text-protisBlack text-base">
+      <div>
+        <div class="font-medium text-xl text-customblack pb-3">About Us</div>
+
+        <ul>
+          <li><a href="#" class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Our Mission
+              &amp; Values</a></li>
+          <li class="my-2"><a href="#"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Protis Global Careers</a>
+          </li>
+          <li class="my-2"><a href="#our-approach" class="font-semibold hover:text-black hover:font-medium">Our
+              Approach</a></li>
+        </ul>
+      </div>
+
+      <div>
+
+        <div class="font-medium text-xl text-customblack pb-3">Industries We Serve</div>
+
+        <ul>
+          <li><a href="#drink" class="font-redhat font-normal text-lg text-customblack">Non-Alcoholic Beverages</a></li>
+          <li class="my-2"><a href="#drink"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Beer, Wine &amp;
+              Spirits</a></li>
+          <li class="my-2"><a href="#drink"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Food &amp; Snacks</a>
+          </li>
+          <li class="my-2"><a href="#slide"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Cannabis</a></li>
+          <li class="my-2"><a href="#media"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Food Tech</a></li>
+          <li class="my-2"><a href="#about"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Health &amp; Beauty</a>
+          </li>
+          <li class="my-2"><a href="#client"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Packaging</a></li>
+          <li class="my-2"><a href="#media"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Pet</a></li>
+          <li class="my-2"><a href="#our-approach"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Robotics &amp;
+              Automation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="font-medium text-xl text-customblack pb-3">Media</div>
+
+        <ul>
+          <li><a href="#article"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Articles</a></li>
+          <li class="my-2"><a href="#video"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Videos</a></li>
+          <li class="my-2"><a href="#webinars"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Webinars</a></li>
+          <li class="my-2"><a href="#podcast"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Podcasts</a></li>
+          <li class="my-2"><a href="#event"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Events</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="font-medium text-xl text-customblack pb-3">Job</div>
+
+        <ul>
+          <li><a href="#our-approach"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Search Open Jobs</a></li>
+          <li class="my-2"><a href="#our-approach"
+              class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Submit A
+              Resume</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer-links-Responsive-screen (Visible on 636px and below) -->
+    <div class="block sm:hidden flex flex-col">
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header flex justify-between" onclick="toggleAccordionItem(event)">
+            <span class="font-medium text-xl text-customblack cursor-pointer">About Us</span>
+            <img src="images/accordian_click_icon.png" alt="" />
+          </div>
+          <ul class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <li class="my-2"><a href="#"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Our Mission &amp;
+                Values</a></li>
+            <li class="my-2"><a href="#"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Protis Global
+                Careers</a></li>
+            <li class="my-2"><a href="#our-approach"
+                class="text-lg text-customblack font-redhat font-normal hover:font-semibold">Our Approach</a></li>
+          </ul>
+        </div>
+        <div class="bg-gray-300 h-[1px] my-3"></div>
+
+        <div class="accordion-item">
+          <div class="accordion-header flex justify-between" onclick="toggleAccordionItem(event)">
+            <span class="font-medium text-xl text-customblack cursor-pointer">Industries We Serve</span>
+            <img src="images/accordian_click_icon.png" alt="" />
+          </div>
+          <ul class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <li class="my-2"><a href="#drink"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Non-Alcoholic
+                Beverages</a></li>
+            <li class="my-2"><a href="#drink"
+                class="text-lg text-lightblack  font-normal font-redhat hover:text-customblack">Beer, Wine &
+                Spirits</a></li>
+            <li class="my-2"><a href="#drink"
+                class="text-lg text-lightblack font-normal  font-redhat hover:text-customblack">Food & Snacks</a>
+            </li>
+            <li class="my-2"><a href="#slide"
+                class="text-lg text-lightblack font-normal  font-redhat hover:text-customblack">Cannabis</a></li>
+            <li class="my-2"><a href="#media"
+                class="text-lg text-lightblack font-normal  font-redhat hover:text-customblack">Food Tech</a></li>
+            <li class="my-2"><a href="#about"
+                class="text-lg text-lightblack font-normal  font-redhat hover:text-customblack">Health & Beauty</a>
+            </li>
+            <li class="my-2"><a href="#client"
+                class="text-lg text-lightblack font-redhat font-normal hover:text-customblack">Packaging</a></li>
+            <li class="my-2"><a href="#media"
+                class="text-lg text-lightblack font-redhat font-normal hover:text-customblack">Pet</a></li>
+            <li class="my-2"><a href="#our-approach"
+                class="text-lg text-lightblack font-redhat  font-normal hover:text-customblack">Robotics &
+                Automation</a></li>
+          </ul>
+        </div>
+        <div class="bg-gray-300 h-[1px] my-3"></div>
+
+        <div class="accordion-item">
+          <div class="accordion-header flex justify-between" onclick="toggleAccordionItem(event)">
+            <span class="font-medium text-xl text-customblack cursor-pointer">Media</span>
+            <img src="images/accordian_click_icon.png" alt="" />
+          </div>
+          <ul class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <li class="my-2"><a href="#article"
+                class="text-lg font-normal text-lightblack font-redhat hover:text-customblack">Articles</a></li>
+            <li class="my-2"><a href="#video"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Videos</a></li>
+            <li class="my-2"><a href="#webinars"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Webinars</a>
+            </li>
+            <li class="my-2"><a href="#podcast"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Podcasts</a></li>
+            <li class="my-2"><a href="#event"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Events</a></li>
+          </ul>
+        </div>
+        <div class="bg-gray-300 h-[1px] my-3"></div>
+
+        <div class="accordion-item">
+          <div class="accordion-header flex justify-between" onclick="toggleAccordionItem(event)">
+            <span class="font-medium text-xl text-customblack font-redhat font-medium cursor-pointer">Job</span>
+            <img src="images/accordian_click_icon.png" alt="" />
+          </div>
+          <ul class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <li class="my-2"><a href="#our-approach"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Search Open
+                Jobs</a></li>
+            <li class="my-2"><a href="#our-approach"
+                class="text-lg text-lightblack font-normal font-redhat hover:text-customblack">Submit A
+                Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Divider -->
+    <div class="w-full bg-gray-300 h-[1px] my-5"></div>
+
+    <div class="flex flex-col-reverse md:flex-row justify-between text-left md:text-left space-y-4 md:space-y-0">
+      <div class="text-xs sm:text-lg text-customlack">
+        <div class="flex md:gap-2 gap-1">
+          <a href="#"
+            class="hover:underline text-customblack font-redhat font-normal hover:transition-all duration-300 ease-in-out">Privacy
+            Policy</a>
+          <span>|</span>
+          <a href="#"
+            class="hover:underline text-customblack font-redhat font-normal hover:transition-all duration-300 ease-in-out">Terms
+            &amp;
+            Conditions</a>
+          <span>|</span>
+          <a href="#"
+            class="hover:underline text-customblack font-redhat font-normal hover:transition-all duration-300 ease-in-out">Site
+            Map</a>
+        </div>
+        <p style="text-align: left;" class="pt-5 font-redhat text-center text-customblack">
+          © <span id="year"></span> Protis Global. All Rights Reserved.
+        </p>
+
+      </div>
+
+
+      <!-- Subscribe Section -->
+      <div class="pb-5">
+        <div class="text-lg font-normal font-redhat text-lightblack pb-4 ">Keep up with the latest insights.</div>
+        <form class="flex gap-4">
+          <div id="search" class="flex items-center border-2 border-gray-300 rounded-md overflow-hidden">
+            <input type="email" id="email" placeholder="Email" required=""
+              class="lg:w-[360px] w-full px-3 py-2 focus:outline-none text-sm">
+          </div>
+          <button type="submit"
+            class=" rounded bg-lightblack text-white px-6 py-2 text-lg font-normal font-redhat hover:bg-customblack hover:transition-all duration-500 ease-in-out">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
